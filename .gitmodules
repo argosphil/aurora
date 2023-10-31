@@ -1,0 +1,12 @@
+[submodule "asteroid"]
+	path = asteroid
+	url = https://github.com/argosphil/asteroid
+	branch = aurora
+[submodule "external/linux-msm-extra-devicetree"]
+	path = external/linux-msm-extra-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "external/devices-google-eos-devicetree"]
+	path = external/devices-google-eos-devicetree
+	url = https://android.googlesource.com/kernel/devices/google/eos/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
