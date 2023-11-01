@@ -10,3 +10,7 @@
 	path = external/devices-google-eos-devicetree
 	url = https://android.googlesource.com/kernel/devices/google/eos/
 	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "external/linux-msm"]
+	path = external/linux-msm
+	url = https://android.googlesource.com/kernel/msm/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
