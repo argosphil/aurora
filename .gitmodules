@@ -14,3 +14,7 @@
 	path = external/linux-msm
 	url = https://android.googlesource.com/kernel/msm/
 	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "external/google-modules-soc-msm"]
+	path = external/google-modules-soc-msm
+	url = https://android.googlesource.com/kernel/google-modules/soc/msm/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
