@@ -22,3 +22,119 @@
 	path = external/linux-msm-extra
 	url = https://android.googlesource.com/kernel/msm-extra
 	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/msm-extra"]
+	path = modules/msm-extra
+	url = https://android.googlesource.com/kernel/msm-extra/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/audio-devicetree"]
+	path = modules/audio-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/audio-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/bt-devicetree"]
+	path = modules/bt-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/bt-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/camera-kernel"]
+	path = modules/camera-kernel
+	url = https://android.googlesource.com/kernel/msm-extra/camera-kernel/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/data-devicetree"]
+	path = modules/data-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/data-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/dataipa"]
+	path = modules/dataipa
+	url = https://android.googlesource.com/kernel/msm-extra/dataipa/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/devicetree"]
+	path = modules/devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/display-devicetree"]
+	path = modules/display-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/display-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/display-drivers"]
+	path = modules/display-drivers
+	url = https://android.googlesource.com/kernel/msm-extra/display-drivers/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/graphics-devicetree"]
+	path = modules/graphics-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/graphics-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/mmrm-devicetree"]
+	path = modules/mmrm-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/mmrm-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/nfc-devicetree"]
+	path = modules/nfc-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/nfc-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/video-devicetree"]
+	path = modules/video-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/video-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/video-driver"]
+	path = modules/video-driver
+	url = https://android.googlesource.com/kernel/msm-extra/video-driver/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/wlan-devicetree"]
+	path = modules/wlan-devicetree
+	url = https://android.googlesource.com/kernel/msm-extra/wlan-devicetree/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/bt"]
+	path = modules/bt
+	url = https://android.googlesource.com/kernel/msm-modules/bt
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/data-kernel"]
+	path = modules/data-kernel
+	url = https://android.googlesource.com/kernel/msm-modules/data-kernel
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/datarmnet"]
+	path = modules/datarmnet
+	url = https://android.googlesource.com/kernel/msm-modules/datarmnet
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/datarmnet-ext"]
+	path = modules/datarmnet-ext
+	url = https://android.googlesource.com/kernel/msm-modules/datarmnet-ext
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/graphics"]
+	path = modules/graphics
+	url = https://android.googlesource.com/kernel/msm-modules/graphics
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/mm"]
+	path = modules/mm
+	url = https://android.googlesource.com/kernel/msm-modules/mm
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/mmrm"]
+	path = modules/mmrm
+	url = https://android.googlesource.com/kernel/msm-modules/mmrm
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/modem"]
+	path = modules/modem
+	url = https://android.googlesource.com/kernel/msm-modules/modem
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/qca-wfi-host-cmn"]
+	path = modules/qca-wfi-host-cmn
+	url = https://android.googlesource.com/kernel/msm-modules/qca-wfi-host-cmn
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/securemsm"]
+	path = modules/securemsm
+	url = https://android.googlesource.com/kernel/msm-modules/securemsm
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/touch"]
+	path = modules/touch
+	url = https://android.googlesource.com/kernel/msm-modules/touch
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/wlan-fw-api"]
+	path = modules/wlan-fw-api
+	url = https://android.googlesource.com/kernel/msm-modules/wlan-fw-api
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/wlan-platform"]
+	path = modules/wlan-platform
+	url = https://android.googlesource.com/kernel/msm-modules/wlan-platform
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/bms"]
+	path = modules/bms
+	url = https://android.googlesource.com/kernel/google-modules/bms/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
