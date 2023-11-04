@@ -44,4 +44,4 @@ I haven't gotten USB ramoops to work, but storage ramoops does work:
 
 # Minor things
 
-* `adb reboot bootloader` works
+* `adb reboot bootloader` works ... sometimes
