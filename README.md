@@ -26,3 +26,22 @@ I now get an adb prompt using a heavily-modified kernel (mostly adding as built-
 # kernel size
 
 For some reason, kernels I built myself are very large, so there are problems exceeding the 64 MB size limit for the kernel + ramdisk.
+
+Any ideas on how to trace this down to a kernel config option? Presumably I activated something that resulted in the inclusion of about 20 MB of data. It's not the DWARF/BTF debug information.
+
+# USB problems
+
+The USB connection sometimes goes wonky after booting into debug-ramdisk.
+
+# RAM Oops
+
+I haven't gotten USB ramoops to work, but storage ramoops does work:
+
+* `fastboot oem ramdump storage`
+* reboot after a failure
+* `mount -t pstore pstore /sys/fs/pstore`
+* look at `/sys/fs/pstore/console-ramoops-0`
+
+# Minor things
+
+* `adb reboot bootloader` works
