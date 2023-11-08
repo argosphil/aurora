@@ -42,6 +42,22 @@ I haven't gotten USB ramoops to work, but storage ramoops does work:
 * `mount -t pstore pstore /sys/fs/pstore`
 * look at `/sys/fs/pstore/console-ramoops-0`
 
+# Frame buffer
+
+It's turning out to be quite hard to get the display driver to work at all. Getting it to load is simple, but it turns out it is then in "continuous splash" mode (IIUC, all this means is the Google logo is still being displayed out of a fixed frame buffer set up by the bootloader), and the code paths to leave that mode don't seem to be working.
+
+So I thought we could just pretend continuous splash mode is a thing that doesn't exist, but then we fail to set up the IOMMU to account for the fixed frame buffer, and the SMMU faults cause us to throw errors.
+
+One thing we can do is map the initial fixed frame buffer as a simplefb. That works, kind of, except for caching issues since the simplefb is in RAM but accessed non-coherently by the display engine.
+
+Right now what I'm doing is to forget about continuous splash mode as soon as the IOMMU's set up to include a mapping for the fixed frame buffer.
+
+However, the screen's flickering, kind of like it's double-buffered but one of the buffer's all black.
+
+Also, psplash doesn't work because it uses mmap.
+
+(Actually, psplash does work on the simplefb, as do three of the expected four Tux logos).
+
 # Minor things
 
 * `adb reboot bootloader` works ... sometimes
