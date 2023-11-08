@@ -138,3 +138,7 @@
 	path = modules/bms
 	url = https://android.googlesource.com/kernel/google-modules/bms/
 	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
+[submodule "modules/nanohub"]
+	path = modules/nanohub
+	url = https://android.googlesource.com/kernel/google-modules/nanohub/
+	branch = android-msm-eos-5.15-tm-wear-kr3-pixel-watch
