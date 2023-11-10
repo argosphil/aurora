@@ -8,6 +8,16 @@
 
 Hold both buttons for 20 seconds. Yes, that long. Then hit the top-left and bottom-right edges of the touch screen simultaneously. You have a window of about half a second to do so. Retry until that works out. It's as finicky as it was on the `r11`. Actually, you can now hit the side button instead of doing the top-left/bottom-right tap! That's convenient.
 
+In fact, an easy way to get to fastboot appears to be to simply hold the side button for a very, very long time (until the "fastboot" message appears, or longer). This always appears to work.
+
+# Bootloader issues
+
+The bootloader accepts v4 abootimgs, which contain an uncompressed kernel image (compressed kernel images do not work). If they contain a ramdisk, it is not passed to the kernel properly (I suspect that /init is overwritten by one of the other ramdisks provided in the other boot partitions). The images do not contain dtbs, which are instead provided by the bootloader.
+
+We can work around the ramdisk problem, kind of, by including the ramdisk in the kernel image (it will still be compressed). However, that gives rise to a chicken-and-egg problem, because we would like to include kernel modules (built after the kernel) in the ramdisk already included in the kernel.
+
+One way around that is to use something like barebox as an intermediate boot loader, to decompress a kernel image and an initrd and boot into it. That also gives us the opportunity to apply DT overlays, and it appears to be working!
+
 # Kernel config
 
 Google doesn't provide what appears to be a working kernel configuration, so I had to extract one using the firmware update ZIP, mkbootimg, and extract-ikconfig. That still needed some work because (of course) it depends on Google-specific files not provided anywhere, mounted in random locations, but ultimately built.
@@ -28,6 +38,8 @@ I now get an adb prompt using a heavily-modified kernel (mostly adding as built-
 For some reason, kernels I built myself are very large, so there are problems exceeding the 64 MB size limit for the kernel + ramdisk.
 
 Any ideas on how to trace this down to a kernel config option? Presumably I activated something that resulted in the inclusion of about 20 MB of data. It's not the DWARF/BTF debug information.
+
+Tracked it down. It was KFENCE + KASAN + UBSAN.
 
 # USB problems
 
