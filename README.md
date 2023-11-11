@@ -73,3 +73,15 @@ Also, psplash doesn't work because it uses mmap.
 # Minor things
 
 * `adb reboot bootloader` works ... sometimes
+
+# Android boot process
+
+Just follow this diagram(https://source.android.com/docs/core/architecture/partitions/generic-boot).
+
+Or don't. I'm not even sure which of the five applies to us.
+
+In summary, init is now a multi-stage process, it's not clear what first-stage init does to make second-stage init not fail to boot and reboot the system instead.
+
+# APEX
+
+APEX is some nightmare idea of loopback-mounting essential system components from APK files. I have no idea how it starts up, and this link(https://source.android.com/docs/core/ota/apex) isn't much help. The problem is that there's an `apexd` that presumably mounts apex files, but it requires `libc.so`, which is... in an APEX file.
